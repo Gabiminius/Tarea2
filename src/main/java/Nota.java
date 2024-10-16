@@ -1,6 +1,11 @@
 public class Nota {
     private String contenido;
-    public Nota(){
+
+    public Nota(String contenido){
+        this.contenido=contenido;
+
+    }
+    public String toString(){
 
     }
 }
