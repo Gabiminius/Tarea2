@@ -93,6 +93,15 @@ public abstract class Reunion {
         this.horaFin = Instant.now();
 
     }
+    public void agregarParticipante(Invitable participante) {
+        if (!participantes.contains(participante)) { //Si el participante no esta en participantes
+            participantes.add(participante); //Se añade a participantes
+
+            Invitacion invitacion = new Invitacion(participante, this, Instant.now()); //Se crea una instancia de invitacion para la reunion creada y el participante invitado
+            invitaciones.add(invitacion); //Se agrega esa instancia de invitacion a las invitaciones
+            invitacion.invitar(); //Se llama el metodo enviar de invitacion
+        }
+    }
     //getters
 
     public Empleado getOrganizador() {
@@ -137,6 +146,16 @@ public abstract class Reunion {
 
     public List<Nota> getNotas() {
         return notas;
+    }
+    public void agregarNota(String contenido) {
+        Nota nota = new Nota(contenido);
+        this.notas.add(nota);
+    }
+    public void listarNotas() {
+        System.out.println("Notas de la reunión:");
+        for (Nota nota : notas) {
+            System.out.println(nota.getNota());
+        }
     }
     //setters
     public void setHoraPrevista(Instant horaPrevista) {
@@ -183,8 +202,10 @@ public abstract class Reunion {
         this.participantes = participantes;
     }
     public String toString(){
+        return "Reunion{" + "fecha=" + fecha + ", horaPrevista=" + horaPrevista +
+                ", duracionPrevista=" + duracionPrevista + ", horaInicio=" + horaInicio + ", horaFin=" + horaFin +
+                ", asistencias=" + asistencias + ", invitaciones=" + invitaciones + ", notas=" + notas +
+                ", organizador=" + organizador + ", tipoReunion=" + tipoReunion + ", participantes=" + participantes + '}';
 
     }
-
-
 }

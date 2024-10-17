@@ -10,7 +10,11 @@ public class Retraso extends Asistencia{
     public Duration getTiempoRetraso(){
         return tiempoRetraso;
     }
+    public void setTiempoRetraso(Duration tiempoRetraso){
+        this.tiempoRetraso=tiempoRetraso;
+    }
     public String toString(){
+        return "Retraso{" + "duracionRetraso=" + tiempoRetraso + '}';
 
     }
 }

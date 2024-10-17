@@ -15,6 +15,7 @@ public class ReunionVirtual extends Reunion {
         this.enlace = enlace;
     }
     public String toString(){
+        return "ReunionVirtual{" + "enlace='" + enlace + '\'' + '}';
 
     }
 

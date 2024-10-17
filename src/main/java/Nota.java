@@ -5,7 +5,14 @@ public class Nota {
         this.contenido=contenido;
 
     }
+    public String getNota(){
+        return contenido;
+    }
+    public void setNota(String contenido){
+        this.contenido=contenido;
+    }
     public String toString(){
+        return "Nota{'" + contenido + '\'' + '}';
 
     }
 }

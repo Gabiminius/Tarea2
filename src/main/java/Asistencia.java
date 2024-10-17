@@ -1,3 +1,4 @@
+
 import java.time.Instant;
 
 public class Asistencia {
@@ -13,10 +14,10 @@ public class Asistencia {
         this.asistio= asistio;
         this.horaLlegada=horaLlegada;
     }
-    /**
-     * El siguiente método devuelve el empleado que ha asistido.
-     * @return empleado Empleado que asistió.
-     */
+    public boolean asistio() {
+        return asistio;
+    }
+
     public Empleado getEmpleado(){
         return empleado;
     }
@@ -26,7 +27,17 @@ public class Asistencia {
     public Instant getHoraLlegada() {
         return horaLlegada;
     }
+    public void setEmpleado(Empleado empleado){
+        this.empleado=empleado;
+    }
+    public void setAsistio(boolean asistio){
+        this.asistio=asistio;
+    }
+    public void setHoraLlegada(Instant horaLlegada){
+        this.horaLlegada=horaLlegada;
+    }
     public String toString(){
+        return "Asistencia{" + "empleado=" + empleado + ", horaLlegada=" + horaLlegada + ", asistio=" + asistio + '}';
 
     }
         }

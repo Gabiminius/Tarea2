@@ -6,7 +6,4 @@ public enum TipoReunion {
 
     }
 
-    public String toString(){
-
-    }
 }
