@@ -1,8 +1,12 @@
-public enum tipoReunion {
+public enum TipoReunion {
     TECNICA,
     MARKETING,
     OTRO;
-    tipoReunion(){
+    TipoReunion(){
+
+    }
+
+    public String toString(){
 
     }
 }
