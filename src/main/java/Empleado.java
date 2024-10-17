@@ -1,10 +1,11 @@
 
+
 public class Empleado implements Invitable{
     private String id;
     private String apellidos;
     private String nombre;
     private String correo;
-    private Departamento departamento;
+    private String departamento;
     /**
      * Constructor de la clase Empleado.
      * @param id Identificador del empleado.
@@ -50,7 +51,7 @@ public class Empleado implements Invitable{
     public String getCorreo() {
         return correo;
     }
-    public Departamento getDepartamento() {
+    public String getDepartamento() {
         return departamento;
     }
 
@@ -66,7 +67,7 @@ public class Empleado implements Invitable{
     public void setCorreo(String correo) {
         this.correo=correo;
     }
-    public void serDepartamento(Departamento departamento) {
+    public void setDepartamento(String departamento) {
         this.departamento=departamento;
     }
 
@@ -74,12 +75,23 @@ public class Empleado implements Invitable{
 
     @Override
     public void invitar(Reunion reunion) {
+        String mensaje = "Estimado " + nombre + " " + apellidos + ", está invitado a una reunión ";
 
+        if (reunion instanceof ReunionVirtual) {
+            mensaje = mensaje + "virtual en el siguiente enlace: " + ((ReunionVirtual) reunion).getEnlace();
+        } else if (reunion instanceof ReunionPresencial) {
+            mensaje = mensaje + "presencial en la sala: " + ((ReunionPresencial) reunion).getSala();
+        }
+        System.out.println("Invitación enviada a " + nombre + " via email: " + correo + " con detalles: " + mensaje);
     }
-    public String toString(){
-
+    @Override
+    public String toString() {
+        return "Empleado [id=" + id + ", apellido=" + apellidos + ", nombre=" + nombre + ", correo=" + correo + ", departamento=" + departamento + "]";
     }
 
 }
+
+
+
 
 
