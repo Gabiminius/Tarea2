@@ -1,0 +1,18 @@
+Informe de la Reunión
+======================
+Fecha: Thu Oct 17 18:43:59 CLST 2024
+Hora prevista: 2024-10-17T21:43:59.149985700Z
+Hora de inicio: 2024-10-17T21:43:59.247008500Z
+Hora de fin: 2024-10-17T21:44:59.256511600Z
+Duración total: 1minutos
+Tipo de reunión: MARKETING
+Sala de la reunión: Sala 7
+
+Participantes:
+- Departamento de Marketing
+- Carlos Escalona
+- Pedro perez
+- Silvana Silva
+
+Notas de la reunión:
+- Nota{'Reunion importante.'}
